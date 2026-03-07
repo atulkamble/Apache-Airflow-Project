@@ -10,9 +10,13 @@ Apache Airflow is used to **schedule, orchestrate, and monitor workflows** using
 
 ```bash
 sudo apt update -y
-sudo apt install python3-pip -y
-
+sudo apt install python3-venv python3-full python3-pip -y
+mkdir airflow-project
+cd airflow-project
+python3 -m venv airflow-env
+source airflow-env/bin/activate
 pip install apache-airflow
+airflow version
 ```
 
 Initialize database
