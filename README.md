@@ -1,6 +1,6 @@
 ## Apache Airflow Practice (Hands-On)
 
-Apache Airflow is used to **schedule, orchestrate, and monitor workflows** using DAGs (Directed Acyclic Graphs). Below are **basic practice exercises with examples** you can try locally or in a lab.
+Apache Airflow is used to **schedule, orchestrate, and monitor workflows** using DAGs (Directed Acyclic Graphs). 
 
 ---
 
@@ -309,21 +309,5 @@ with DAG(
 | Cloud automation | Backup jobs              |
 | Monitoring       | Website checks           |
 | Batch processing | Data transformation      |
-
----
-
-# 🔥 Practice Tasks (Recommended)
-
-Try these exercises:
-
-1️⃣ Create DAG that runs **every 5 minutes**
-
-2️⃣ Create **3 tasks ETL pipeline**
-
-3️⃣ Run **Linux command inside DAG**
-
-4️⃣ Download file from internet using DAG
-
-5️⃣ Trigger **AWS CLI command using Airflow**
 
 ---
