@@ -1,3 +1,55 @@
+### start airflow standalone 
+```
+airflow standalone
+```
+### note down username and password
+username: admin
+``
+cat /home/azureuser/airflow/simple_auth_manager_passwords.json.generated
+```
+### create service file
+``` 
+sudo nano /etc/systemd/system/airflow-standalone.service
+```
+## copy content
+```
+[Unit]
+Description=Apache Airflow Standalone
+After=network.target
+
+[Service]
+Type=simple
+User=azureuser
+Group=azureuser
+
+Environment="AIRFLOW_HOME=/home/azureuser/airflow"
+Environment="PATH=/home/azureuser/airflow-project/airflow-env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin"
+
+WorkingDirectory=/home/azureuser/airflow-project
+
+ExecStart=/home/azureuser/airflow-project/airflow-env/bin/airflow standalone
+
+Restart=always
+RestartSec=10
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### start service and enable and check status
+```
+sudo systemctl daemon-reload
+sudo systemctl start airflow-standalone
+sudo systemctl enable airflow-standalone
+sudo systemctl status airflow-standalone
+```
+
+
+
+
 # 🚀 Apache Airflow 3.x Hands-On Practice Guide
 
 > **Version:** Apache Airflow 3.x
