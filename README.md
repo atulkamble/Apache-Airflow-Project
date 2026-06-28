@@ -29,11 +29,12 @@ Create admin user
 
 ```bash
 airflow users create \
---username admin \
---firstname atul \
---lastname kamble \
---role Admin \
---email admin@example.com
+  --username admin \
+  --firstname Atul \
+  --lastname Kamble \
+  --role Admin \
+  --email atul_kamble@hotmail.com \
+  --password Admin@123
 ```
 
 Start Airflow
