@@ -22,7 +22,7 @@ airflow version
 Initialize database
 
 ```bash
-airflow db init
+airflow db migrate
 ```
 
 Create admin user
