@@ -4,7 +4,7 @@ airflow standalone
 ```
 ### note down username and password
 username: admin
-``
+```
 cat /home/azureuser/airflow/simple_auth_manager_passwords.json.generated
 ```
 ### create service file
